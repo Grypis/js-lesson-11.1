@@ -12,7 +12,7 @@
   }); */
 
 //!   =====================================
-fetch('https://jsonplaceholder.typicode.com/users')
+/* fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -24,4 +24,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
   })
   .catch(error => {
     console.log('Помилка запиту: ', error);
-  });
+  }); */
+
+//!   =====================================
