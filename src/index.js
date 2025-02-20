@@ -99,11 +99,73 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 console.log('globarVar outside fetch: ', globarVar); */
 
-fetch('https://jsonplaceholder.typicode.com/users')
+/* fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
   .then(users => {
     console.log('Отримані дані: ', users);
 
     renderUsers(users);
   })
-  .catch(error => console.log('Error: ', error));
+  .catch(error => console.log('Error: ', error)); */
+
+//!   ======================================================
+import axios from 'axios';
+
+/* axios({
+  method: 'get',
+  url: 'https://jsonplaceholder.typicode.com/users',
+})
+  .then(response => console.log(response))
+  .catch(error => console.log(error)); */
+
+//!  ============================
+/* axios
+  .get('https://jsonplaceholder.typicode.com/users')
+  .then(response => console.log(response))
+  .catch(error => console.log(error)); */
+
+/* axios
+  .get('https://jsonplaceholder.typicode.com/users')
+  .then(response => {
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
+  })
+  .catch(error => {
+    console.log(error);
+  }); */
+
+//!  ============================
+/* axios.get('https://jsonplaceholder.typicode.com/users').then().catch();
+axios.get('https://jsonplaceholder.typicode.com/posts').then().catch();
+axios.get('https://jsonplaceholder.typicode.com/images').then().catch(); */
+
+//!  ============================
+/* axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
+
+axios.get('/users').then().catch();
+axios.get('/posts').then().catch(); */
+// axios.get('/images').then().catch();
+
+//!  ============================
+/* const myApiKey = 'secret-api-key-for-every-request';
+axios.defaults.headers.common['header-name'] = myApiKey; */
+
+/* axios.get('https://jsonplaceholder.typicode.com/users?_limit=7&_sort=name');
+
+const searchParams = new URLSearchParams({
+  _limit: 5,
+  _sort: 'name',
+});
+
+axios.get(`https://jsonplaceholder.typicode.com/users?${searchParams}`); */
+
+//!  ============================
+axios.get('https://jsonplaceholder.typicode.com/users', {
+  params: {
+    _limit: 7,
+    _sort: 'name',
+  },
+});
