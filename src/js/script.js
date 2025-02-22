@@ -36,7 +36,7 @@ function fetchUser(id) {
 
   const url = `${BASE_URL}${END_POINT}?${params}`;
 
-  console.log(url);
+  fetch(url);
 }
 
 fetchUser(1);
